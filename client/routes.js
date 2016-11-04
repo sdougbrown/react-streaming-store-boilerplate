@@ -18,7 +18,6 @@ import view from './pages/view';
 
 const pages = {
   index,
-  admin,
   account,
   view,
   login,

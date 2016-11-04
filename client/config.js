@@ -5,7 +5,7 @@ export const ENV = process.env.BUILD_ENV;
 export const isDev = ENV === 'development';
 export const appHistory = (isDev) ? hashHistory : browserHistory;
 
-export default const config = {
+export default {
   env: ENV,
   isDev,
   history,

@@ -4,11 +4,13 @@ const app = module.exports = express();
 const env = require('./environment');
 const mode = process.env.NODE_ENV || env.DEVELOPMENT; // eslint-disable-line
 
+/* eslint-disable no-console */
+const log = console.log.bind(console);
+/* eslint-enable no-console */
+
 // webpack is only needed in development
 if (mode === env.DEVELOPMENT) {
-  /* eslint-disable no-console */
-  console.log('✌️  Development mode.');
-  /* eslint-enable no-console */
+  log('✌️  Development mode.');
 
   const webpack = require('webpack');
   const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -30,9 +32,9 @@ require('./routes')(app, mode);
 
 app.start = () => {
   return app.listen(env.port, () => {
-    console.log('👀  Server Listening on port %s', env.port);
+    log('👀  Server Listening on port %s', env.port);
   });
-});
+};
 
 // start the server if `$ node server/`
 if (require.main === module) {
