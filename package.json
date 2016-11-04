@@ -1,0 +1,67 @@
+{
+  "name": "react-streaming-store-boilerplate",
+  "version": "1.0.0",
+  "description": "An example application for using streams with react",
+  "main": "server/index.js",
+  "engines": {
+    "node": "^6.4.0"
+  },
+  "scripts": {
+    "dev": "nodemon . --watch server --watch common --exec 'npm run lint && node'",
+    "start": "ENV=$ENV npm run deploy; NODE_ENV=$ENV node .",
+    "build": "NODE_ENV=$ENV webpack",
+    "deploy": "ENV=$ENV npm run build",
+    "lint": "eslint server/ common/"
+  },
+  "author": "Doug Brown <npm@douggo.com> (http://douggo.com)",
+  "license": "ISC",
+  "dependencies": {
+    "blaze": "^3.2.0",
+    "es6-promise": "^3.3.1",
+    "express": "^4.14.0",
+    "flyd": "^0.2.2",
+    "flyd-run": "^1.1.0",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.14.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-flyd-component": "^2.1.0",
+    "react-router": "^2.8.1",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-lodash": "^3.2.6",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-runtime": "^6.9.2",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.2.2",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-react": "^6.3.0",
+    "exports-loader": "^0.6.3",
+    "hjs-webpack": "^8.3.0",
+    "imports-loader": "^0.6.5",
+    "lodash-webpack-plugin": "^0.9.4",
+    "loopback-component-explorer": "^2.5.0",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.0",
+    "postcss-loader": "^0.9.1",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "svg-sprite-loader": "0.0.31",
+    "svgo-loader": "^1.1.2",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.12.2",
+    "webpack-visualizer-plugin": "^0.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdougbrown/react-streaming-store-boilerplate"
+  }
+}
