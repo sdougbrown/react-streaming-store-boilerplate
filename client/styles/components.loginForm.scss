@@ -1,0 +1,47 @@
+$login-form-height: 300px;
+$login-form-width: 300px;
+
+.c-login-form {
+  @include abs-center();
+
+  height: $login-form-height;
+  width: $login-form-width;
+
+  max-width: 100%;
+  margin: auto;
+
+  text-align: center;
+}
+
+.c-login-form__subtitle {
+  font-size: 0.8em;
+}
+
+.c-login-form__link {
+  font-size: 0.8em;
+  color: $link-color;
+}
+
+.c-login-form__links {
+  font-size: 0.8em;
+
+  & > .c-login-form__link {
+    font-size: 1em;
+  }
+}
+
+@include media('min-md') {
+  .c-login-form__hint {
+    margin-top: -1.85em;
+    margin-bottom: 0;
+    width: 100%;
+    left: 100%;
+    text-align: left;
+  }
+}
+
+@media ("min-height: " + $screen-limit-medium) {
+  .c-login-form {
+    top: -$screen-limit-xsmall;
+  }
+}

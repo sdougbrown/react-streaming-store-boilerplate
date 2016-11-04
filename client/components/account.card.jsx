@@ -11,7 +11,7 @@ const BUTTON_CLASS = 'c-button c-button--secondary';
 const AccountCard = Stream((props) => {
   const user = props.user() || {};
   return (
-    <div className="c-profile">
+    <div className="c-profile o-container o-container--medium">
       <Alerts {...props} />
       <div className="c-profile__card c-card c-card--high">
         <div className="c-card__content">

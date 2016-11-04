@@ -2,7 +2,6 @@
 // and should be refactored according
 // to your project's styleguide
 // (and of course the icons you use)
-@import '../../node_modules/blaze/scss/mixins/_settings.global';
 
 $button-icon-height: $spacing-medium;
 $button-icon-width: $spacing-large;
@@ -16,7 +15,10 @@ $button-icon-width: $spacing-large;
   position: relative;
   top: -0.1em;
 
+  // these should be refactored - this is only for demo purposes
   &.c-nav__icon,
+  &.c-alert__icon,
+  &.c-hint__icon,
   &.c-button__icon-left,
   &.c-button__icon-right {
     margin-bottom: -$button-padding;

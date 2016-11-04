@@ -1,0 +1,27 @@
+.u-base-size {
+  font-size: 1rem !important;
+}
+
+.u-full-width {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.u-max-full-width {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-font-inherit {
+  font-family: inherit !important;
+}
+
+.u-clearfix,
+.u-cf {
+  @include clearfix();
+}
+

@@ -2,7 +2,13 @@ import React from 'react';
 import bindValue from '../utils/bindValueTo';
 
 import Stream from './';
-import { Hint, INPUT_CLASS, inputProps, hintProps } from './field.input';
+import {
+  FieldWrapFactory,
+  Hint,
+  INPUT_CLASS,
+  inputProps,
+  hintProps
+} from './field.input';
 
 export const EmailField = Stream((props) => {
   const {
@@ -40,4 +46,4 @@ export const EmailHint = (props) => {
 
 EmailHint.propTypes = hintProps;
 
-export default EmailField;
+export default FieldWrapFactory(EmailField, EmailHint);

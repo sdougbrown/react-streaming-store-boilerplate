@@ -6,13 +6,13 @@ import { FORM_CLASS } from './field.input';
 import { Link } from './';
 import Alerts from './alerts';
 import Button from './field.button';
-import { EmailField, EmailHint } from './field.email';
-import { PasswordField, PasswordHint } from './field.password';
+import EmailField from './field.email';
+import PasswordField from './field.password';
 
 const PARENT = 'login-';
 const PARENT_FORM_CLASS = 'c-login-form';
 const ELEMENTS_WRAP_CLASS = FORM_CLASS;
-const INPUTS_WRAP_CLASS = 'c-field-group';
+const INPUTS_WRAP_CLASS = 'c-input-group c-input-group--stacked';
 const LINK_WRAP_CLASS = `${PARENT_FORM_CLASS}__links`;
 const LINK_CLASS = `c-link ${PARENT_FORM_CLASS}__link`;
 const BUTTON_CLASS = 'c-button c-button--primary c-button--block';
@@ -26,10 +26,8 @@ const AccountLogin = (props) => {
       <Alerts {...rest} />
       <div className={ELEMENTS_WRAP_CLASS}>
         <div className={INPUTS_WRAP_CLASS}>
-          <EmailField model={values.email} />
-          <EmailHint variant={PARENT} />
-          <PasswordField model={values.password} />
-          <PasswordHint variant={PARENT} />
+          <EmailField model={values.email} variant={PARENT} />
+          <PasswordField model={values.password} variant={PARENT} />
         </div>
       </div>
       <div className={ELEMENTS_WRAP_CLASS}>

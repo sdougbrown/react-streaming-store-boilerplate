@@ -1,5 +1,18 @@
+@import '../../node_modules/blaze/scss/mixins/_settings.global';
+
+@import 'tools.abs';
+@import 'tools.clearfix';
+@import 'tools.media';
+@import 'global.svg';
+
 // blazecss.com
 // feel free to replace and style yourself :)
 @import '../../node_modules/blaze/scss/blaze';
 
 @import 'objects.icons';
+
+@import 'components.loginForm';
+
+@import 'utilities.display';
+@import 'utilities.float';
+@import 'utilities.general';

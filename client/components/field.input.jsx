@@ -4,7 +4,7 @@ import bindValue from '../utils/bindValueTo';
 import Stream from './';
 import Icon from './icons';
 
-export const FORM_CLASS = 'c-form-element';
+export const FORM_CLASS = 'o-form-element';
 export const INPUT_CLASS = 'c-field';
 
 export const InputField = Stream((props) => {
@@ -55,4 +55,32 @@ export const hintProps = Hint.propTypes = {
   children: PropTypes.node,
 };
 
-export default InputField;
+export const FieldWrapFactory = (FieldComp, HintComp) => {
+  function FieldWrap(props) {
+    const reduceKeys = copyKeys.bind(null, props);
+    const propsForField = {};
+    const propsForHint = {};
+
+    Object.keys(inputProps).reduce(reduceKeys, propsForField);
+    Object.keys(hintProps).reduce(reduceKeys, propsForHint);
+
+    return (
+      <div className="o-field">
+        <FieldComp {...propsForField} />
+        <HintComp {...propsForHint} />
+      </div>
+    );
+  }
+
+  FieldWrap.propTypes = Object.assign({}, inputProps, hintProps);
+
+  return FieldWrap;
+};
+
+function copyKeys(fromObj, toObj, key) {
+  toObj[key] = fromObj[key];
+
+  return toObj;
+}
+
+export default FieldWrapFactory(InputField, Hint);

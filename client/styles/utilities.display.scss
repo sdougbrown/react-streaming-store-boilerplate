@@ -1,0 +1,32 @@
+.u-ignore {
+  display: none !important;
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-inline {
+  display: inline !important;
+}
+
+// visually hide, but still render
+$hidden-size: 1px;
+
+%u-hidden,
+.u-hidden {
+  // the left positioning could cause problems
+  // in RTL layouts without an overflow controller
+  // (e.g. body > section)
+  left: -9999em !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect($hidden-size, $hidden-size, $hidden-size, $hidden-size);
+  height: $hidden-size !important;
+  width: $hidden-size !important;
+  margin: -$hidden-size !important;
+  padding: 0 !important;
+  border: none !important;
+  direction: ltr !important;
+  text-align: left !important;
+}

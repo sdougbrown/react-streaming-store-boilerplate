@@ -3,7 +3,13 @@ import bindValue from '../utils/bindValueTo';
 
 import Stream from './';
 
-import { Hint, INPUT_CLASS, inputProps, hintProps } from './field.input';
+import {
+  FieldWrapFactory,
+  Hint,
+  INPUT_CLASS,
+  inputProps,
+  hintProps
+} from './field.input';
 
 export const PasswordField = Stream((props) => {
   const {
@@ -41,4 +47,4 @@ export const PasswordHint = (props) => {
 
 PasswordHint.propTypes = hintProps;
 
-export default PasswordField;
+export default FieldWrapFactory(PasswordField, PasswordHint);

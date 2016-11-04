@@ -23,7 +23,7 @@ const Nav = () => {
           <Icon className={NAV_ICON_CLASS} name="user" /> Account
         </Link>
         <Link to={routes.view[0]} className={NAV_ITEM_CLASS}>
-          <Icon className={NAV_ICON_CLASS} name="view" /> Edit
+          <Icon className={NAV_ICON_CLASS} name="view" /> View
         </Link>
       </div>
     </nav>

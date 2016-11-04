@@ -9,7 +9,7 @@ import Layout from '../components/layout';
 const MAIN_CLASS = 'c-homepage o-cw';
 const TITLE_CLASS = 'c-homepage__title';
 const SUBTITLE_CLASS = 'c-homepage__subtitle';
-const LINK_WRAP_CLASS = 'c-button-group';
+const LINK_WRAP_CLASS = 'c-input-group';
 const LINK_CLASS = 'c-button c-button--primary';
 const LINK_ICON_CLASS = 'c-button__icon-left';
 /* eslint-enable max-len */

@@ -1,0 +1,7 @@
+@mixin clearfix ($display: table) {
+  &:after {
+    content: "";
+    display: $display;
+    clear: both;
+  }
+}

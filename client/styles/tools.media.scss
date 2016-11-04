@@ -1,0 +1,57 @@
+// Media Queries
+
+// Usage:  @include media(size){ [styles here] }
+
+$bp-max-xs: ("max-width: " + ($screen-limit-xsmall - $screen-adjustment));
+$bp-min-xs: ("min-width: " + $screen-limit-xsmall);
+$bp-max-sm: ("max-width: " + ($screen-limit-small - $screen-adjustment));
+$bp-min-sm: ("min-width: " + $screen-limit-small);
+$bp-max-md: ("max-width: " + ($screen-limit-medium - $screen-adjustment));
+$bp-min-md: ("min-width: " + $screen-limit-medium);
+$bp-min-lg: ("min-width: " + $screen-limit-large);
+$bp-min-xl: ("min-width: " + $screen-limit-xlarge);
+$bp-min-sl: ("min-width: " + $screen-limit-super);
+
+@mixin media ($query){
+  // Mobile-only (Careful!)
+  @if $query == 'max-xs' {
+    @media (#{$bp-max-xs}) { @content; }
+  }
+
+  @if $query == 'max-sm' {
+    @media (#{$bp-max-sm}) { @content; }
+  }
+
+  @if $query == 'max-md' {
+    @media (#{$bp-max-md}) { @content; }
+  }
+
+  // Larger than mobile
+  @if $query == 'min-xs' {
+    @media (#{$bp-min-xs}) { @content; }
+  }
+
+  // Larger than phablet
+  @if $query == 'min-sm' {
+    @media (#{$bp-min-sm}) { @content; }
+  }
+
+  // Larger than tablet
+  @if $query == 'min-md' {
+    @media (#{$bp-min-md}) { @content; }
+  }
+
+  // Larger than desktop
+  @if $query == 'min-lg' {
+    @media (#{$bp-min-lg}) { @content; }
+  }
+
+  // Larger than Desktop HD
+  @if $query == 'min-xl' {
+    @media (#{$bp-min-xl}) { @content; }
+  }
+
+  @if $query == 'min-super' {
+    @media (#{$bp-min-xl}) { @content; }
+  }
+}

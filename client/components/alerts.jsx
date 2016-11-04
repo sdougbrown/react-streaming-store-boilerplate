@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 import Alert from './alert';
 
-const ALERT_WRAP_CLASS = 'c-alerts a-alerts';
+const ALERT_WRAP_CLASS = 'c-alert-wrap';
 
 export const Alerts = ({ message, success, error, canClear = {} }) => {
   return (

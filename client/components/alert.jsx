@@ -3,7 +3,7 @@ import { isObject } from '../utils/is';
 import Stream from './';
 import Icon from './icons';
 
-const ALERT_CLASS = 'c-alerts__alert';
+const ALERT_CLASS = 'c-alert';
 const CLEAR_BUTTON_CLASS = 'c-button c-button--close';
 
 const ClearAlert = (props) => {
@@ -53,7 +53,7 @@ Alert.propTypes = {
 function AlertContent({ icon, message }) {
   return (
     <span>
-      {icon && <Icon name={icon} className="c-alerts__icon" /> }
+      {icon && <Icon name={icon} className="c-alert__icon" /> }
       {message}
     </span>
   );
