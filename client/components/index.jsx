@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import Flyd, { StreamingComponent } from 'react-flyd-component';
-import { Link } from 'react-router';
+import { Link as RouterLink } from 'react-router';
 import Icon from './icons';
 
 const BUTTON_CLASS = 'c-button';
@@ -8,7 +8,7 @@ const BUTTON_ICON_CLASS = `${BUTTON_CLASS}__icon-left`;
 
 export default Flyd;
 
-export Link;
+export const Link = RouterLink;
 
 export const Component = StreamingComponent;
 

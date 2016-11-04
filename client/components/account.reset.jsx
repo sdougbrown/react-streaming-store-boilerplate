@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 
 import { routes } from '../routes';
-import * as passwordUtils from '../utils/password';
 
 import { FORM_CLASS } from './field.input';
 import { Link } from './';
@@ -32,8 +31,6 @@ const AccountReset = (props) => {
         <div className={INPUTS_WRAP_CLASS}>
           <PasswordField
             model={values.password}
-            pattern={passwordUtils.pattern}
-            title={passwordUtils.title}
             required={true}
           />
           <PasswordHint variant={PARENT} />
