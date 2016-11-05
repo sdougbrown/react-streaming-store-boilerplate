@@ -29,6 +29,7 @@ if (mode === env.DEVELOPMENT) {
 
 // use the same routes that the client would be looking for
 require('./routes')(app, mode);
+require('./mockApi')(app);
 
 app.start = () => {
   return app.listen(env.port, () => {

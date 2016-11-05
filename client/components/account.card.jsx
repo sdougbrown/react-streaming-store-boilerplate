@@ -11,10 +11,10 @@ const BUTTON_CLASS = 'c-button c-button--secondary';
 const AccountCard = Stream((props) => {
   const user = props.user() || {};
   return (
-    <div className="c-profile o-container o-container--medium">
+    <div className="o-container o-container--medium u-letter-box--large">
       <Alerts {...props} />
       <div className="c-profile__card c-card c-card--high">
-        <div className="c-card__content">
+        <div className="c-card__item">
           <h1 className="c-heading">
             {'Hello you are logged-in.'}
           </h1>
@@ -40,7 +40,7 @@ AccountCard.propTypes = {
 
 const AccountButtons = Stream((props) => {
   return (
-    <div className="c-profile__buttons c-button-group">
+    <div className="c-input-group u-letter-box--large">
       <Link to="/reset-password">
         <Icon icon="password" />{'Reset Password'}
       </Link>
