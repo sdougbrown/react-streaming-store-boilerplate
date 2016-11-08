@@ -48,6 +48,13 @@ if (isDev) {
   });
 }
 
+// 😈
+// not actually using react.  just between you and me.
+config.resolve.alias = Object.assign({}, config.resolve.alias, {
+  'react': 'preact-compat',
+  'react-dom': 'preact-compat'
+});
+
 config.plugins.push(
   // reduces size of lodash package
   new LodashModuleReplacementPlugin({
