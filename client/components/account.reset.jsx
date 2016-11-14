@@ -5,7 +5,7 @@ import { routes } from '../routes';
 import { FORM_CLASS } from './field.input';
 import { Link } from './';
 import Alerts from './alerts';
-import { PasswordField, PasswordHint } from './field.password';
+import PasswordField from './field.password';
 
 const PARENT = 'login-';
 const PARENT_FORM_CLASS = 'c-login-form';
@@ -32,17 +32,14 @@ const AccountReset = (props) => {
           <PasswordField
             model={values.password}
             required={true}
+            variant={PARENT}
           />
-          <PasswordHint variant={PARENT} />
           <PasswordField
             model={values.passwordConfirm}
             placeholder="Confirm Password"
             name="confirmPassword"
-          />
-          <PasswordHint
-            variant={PARENT}
-            name="confirmPassword"
             hint="Confirm your password"
+            variant={PARENT}
           />
         </div>
       </div>

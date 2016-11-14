@@ -5,7 +5,7 @@ import { routes } from '../routes';
 import { FORM_CLASS } from './field.input';
 import { Link } from './';
 import Alerts from './alerts';
-import { EmailField, EmailHint } from './field.email';
+import EmailField from './field.email';
 
 const PARENT = 'login-';
 const PARENT_FORM_CLASS = 'c-login-form';
@@ -31,8 +31,7 @@ const AccountResetRequest = (props) => {
       <Alerts {...rest} />
       <div className={ELEMENTS_WRAP_CLASS}>
         <div className={INPUTS_WRAP_CLASS}>
-          <EmailField model={values.email} />
-          <EmailHint variant={PARENT} />
+          <EmailField model={values.email} variant={PARENT} />
         </div>
       </div>
       <div className={ELEMENTS_WRAP_CLASS}>
